@@ -1,0 +1,27 @@
+
+<mat-dialog-content>
+  <h2>Edit periodic element {{name()}}</h2>
+  <p>
+    <mat-form-field class="formEditField">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="name" />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="formEditField">
+      <mat-label>Weight</mat-label>
+      <input matInput [(ngModel)]="weight" type="number"/>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="formEditField">
+      <mat-label>Symbol</mat-label>
+      <input matInput [(ngModel)]="symbol" />
+    </mat-form-field>
+  </p>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="cancelEdit()">Cancel</button>
+  <button mat-button cdkFocusInitial (click)="saveEditChanges()">Save</button>
+</mat-dialog-actions>
